@@ -154,11 +154,7 @@ result/
 
 ---
 
-## 📄 License
 
-MIT License – see `LICENSE` file for details.
-
----
 
 ## 🙋 Contact
 
