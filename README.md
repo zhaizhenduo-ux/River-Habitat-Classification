@@ -1,29 +1,41 @@
-# River-Habitat-Classification
-# River Habitat Segmentation and Debris Detection Pipeline
+# 🛰️ River Habitat Segmentation & Debris Detection Pipeline
 
-An end-to-end deep learning pipeline for habitat segmentation and debris detection from UAV-captured orthomosaics. Combines semantic segmentation (FCN), domain-adjusted postprocessing, SAM refinement, and object detection.
+This repository provides an end-to-end deep learning pipeline for **river habitat segmentation** and **debris detection** using high-resolution UAV orthomosaic imagery. The workflow integrates:
 
-## 🚀 Key Features
+- ✅ Semantic segmentation using DeepLab (FCN + VGG16)
+- ✅ Domain knowledge–based spatial refinement
+- ✅ Segment Anything Model (SAM) for further mask enhancement
+- ✅ Detectron2-based debris detection
+- ✅ Tiling and merging utilities to handle large `.tif` orthomosaics
 
-- DeepLab-based habitat segmentation
-- Domain knowledge–enforced spatial postprocessing
-- Integration with [Segment Anything Model (SAM)](https://github.com/facebookresearch/segment-anything)
-- Detectron2-based debris detection
-- Scalable to large orthomosaics (split-merge utilities)
+> 📌 This software runs on Windows via WSL (Ubuntu) and supports GPU acceleration.
+
+---
+
+## 📦 Features
+
+- 🌍 Process ultra-large UAV `.tif` orthomosaics with split/merge support
+- 🎯 Multi-stage habitat classification: segmentation → correction → refinement
+- 🤖 Object detection for floating debris using Detectron2
+- 💻 Designed for both local development and headless server execution
+- 🚀 GPU support for all model inference steps (CUDA-compatible)
 
 ---
 
 ## 🖥️ System Requirements
 
-- **OS**: Windows 10/11 (with WSL)
-- **GPU**: NVIDIA with CUDA ≥ 11.0 (≥8GB VRAM recommended)
-- **Python**: 3.8
-- **Recommended**: Use [Anaconda](https://www.anaconda.com/) + WSL (Ubuntu)
+| Component       | Requirement                  |
+|----------------|------------------------------|
+| OS             | Windows 10 / 11 with WSL     |
+| WSL Linux      | Ubuntu (via `wsl --install`) |
+| GPU            | NVIDIA GPU w/ CUDA ≥ 11.0    |
+| Python         | Version 3.8 (recommended)    |
+| RAM            | ≥ 16 GB (8 GB minimum)       |
 
 ---
 
-## ⚙️ Installation (Windows via WSL)
+## ⚙️ Installation Guide (Windows)
 
-### 1. Install WSL
-```bash
+### 1. Install WSL & Ubuntu
+```powershell
 wsl --install
