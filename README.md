@@ -26,10 +26,8 @@ This repository provides an end-to-end deep learning pipeline for **river habita
 
 | Component       | Requirement                  |
 |----------------|------------------------------|
-| OS             | Windows 10 / 11 with WSL     |
-| WSL Linux      | Ubuntu (via `wsl --install`) |
+| OS             | Windows 11                   |
 | GPU            | NVIDIA GPU w/ CUDA ≥ 11.0    |
-| Python         | Version 3.8 (recommended)    |
 | RAM            | ≥ 16 GB (8 GB minimum)       |
 
 ---
