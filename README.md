@@ -2,27 +2,27 @@
 
 This repository provides an end-to-end deep learning pipeline for **river habitat segmentation** and **debris detection** using high-resolution UAV orthomosaic imagery. The workflow integrates:
 
-- ✅ Semantic segmentation using DeepLab (FCN + VGG16)
-- ✅ Domain knowledge–based spatial refinement
-- ✅ Segment Anything Model (SAM) for further mask enhancement
-- ✅ Detectron2-based debris detection
-- ✅ Tiling and merging utilities to handle large `.tif` orthomosaics
+- Semantic segmentation using DeepLab (FCN + VGG16)
+- Domain knowledge–based spatial refinement
+- Segment Anything Model (SAM) for further mask enhancement
+- Detectron2-based debris detection
+- Tiling and merging utilities to handle large `.tif` orthomosaics
 
-> 📌 This software runs on Windows via WSL (Ubuntu) and supports GPU acceleration.
-
----
-
-## 📦 Features
-
-- 🌍 Process ultra-large UAV `.tif` orthomosaics with split/merge support
-- 🎯 Multi-stage habitat classification: segmentation → correction → refinement
-- 🤖 Object detection for floating debris using Detectron2
-- 💻 Designed for both local development and headless server execution
-- 🚀 GPU support for all model inference steps (CUDA-compatible)
+> This software runs on Windows via WSL (Ubuntu) and supports GPU acceleration.
 
 ---
 
-## 🖥️ System Requirements
+## Features
+
+- Process ultra-large UAV `.tif` orthomosaics with split/merge support
+- Multi-stage habitat classification: segmentation → correction → refinement
+- Object detection for floating debris using Detectron2
+- Designed for both local development and headless server execution
+- GPU support for all model inference steps (CUDA-compatible)
+
+---
+
+## System Requirements
 
 | Component       | Requirement                  |
 |----------------|------------------------------|
@@ -34,7 +34,7 @@ This repository provides an end-to-end deep learning pipeline for **river habita
 
 ---
 
-## ⚙️ Installation Guide (Windows)
+## Installation Guide (Windows 11 tested)
 
 ### 1. Install WSL & Ubuntu
 ```powershell
@@ -85,7 +85,7 @@ pip install 'git+https://github.com/facebookresearch/detectron2.git'
 
 ---
 
-## 📁 Dataset Format
+## Dataset Format
 
 Place input files into a folder such as `test_data/`:
 ```
@@ -97,7 +97,7 @@ test_data/
 
 ---
 
-## ▶️ How to Run
+## How to Run
 
 ```bash
 python final_pipeline.py   --image_path ./test_data/P4_10_2_2023_transparent_mosaic_group1.tif   --output_folder_path ./test_data/result/
@@ -114,7 +114,7 @@ The pipeline performs:
 
 ---
 
-## 📤 Output Folder Structure
+## Output Folder Structure
 
 ```
 result/
@@ -127,16 +127,8 @@ result/
 
 ---
 
-## 📌 Notes & Recommendations
 
-- For large orthomosaics (e.g., >10,000×10,000 px), use a GPU with at least 8 GB VRAM.
-- Run on headless servers with CUDA support for best performance.
-- `.json` files are optional and only needed for evaluation.
-- The output is structured to allow GIS visualization (downscaled `.jpg` and `.png` maps).
-
----
-
-## 📸 Sample Results
+## Sample Results
 
 | Stage         | Output                             |
 |---------------|------------------------------------|
@@ -147,7 +139,7 @@ result/
 
 ---
 
-## 🧠 Acknowledgements
+## cknowledgements
 
 - [Facebook Research – SAM](https://github.com/facebookresearch/segment-anything)
 - [Detectron2](https://github.com/facebookresearch/detectron2)
