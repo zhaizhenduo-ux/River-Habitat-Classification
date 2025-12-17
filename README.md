@@ -1,4 +1,4 @@
-# 🛰️ River Habitat Segmentation & Debris Detection Pipeline
+# River Habitat Segmentation & Debris Detection Pipeline
 
 This repository provides an end-to-end deep learning pipeline for **river habitat segmentation** and **debris detection** using high-resolution UAV orthomosaic imagery. The workflow integrates:
 
